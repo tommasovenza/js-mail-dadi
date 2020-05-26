@@ -2,7 +2,7 @@
 
 var arrayMail = ['tommasovenza@gmail.com', 'pippo-mail@mail.com', 'franchino_dj@email.it', 'paolinopaperino@gmail.com'];
 
-utenteEmail = prompt('inserisci la tua email');
+var utenteEmail = prompt('inserisci la tua email');
 
 // dichiaro di partenza la variabile falsa perchè non so se questa email la troverò nella lista di email
 var accesso = false;
@@ -12,8 +12,10 @@ for (var i = 0; i < arrayMail.length; i++) {
 
   // se mail inserita dall'utente è uguale ad un campo dell'array l'accesso è verficato
   if (arrayMail[i] === utenteEmail) {
+
     accesso = true;
   }
+}
 
   // se l'accesso è verificato, allora se si è inserita una email già presente nella lista si può entrare, altrimenti no
   if (accesso) {
@@ -22,10 +24,9 @@ for (var i = 0; i < arrayMail.length; i++) {
     alert('non sei presente nella lista, pertanto non puoi entrare!')
   }
 
-}
+
 
 // esercizio dadi
-
 var dadoUtente = Math.floor(Math.random() * 6) + 1;
 console.log(dadoUtente);
 
